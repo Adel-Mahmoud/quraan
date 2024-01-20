@@ -1,12 +1,14 @@
 const recitersId = document.getElementById("recitersId");
-const riwayatId = document.getElementById("riwayatId");
-const suwarId = document.getElementById("suwarId");
+const riwayatId  = document.getElementById("riwayatId");
+const suwarId    = document.getElementById("suwarId");
+const loader     = document.querySelector('.loader');
 
-const apiUrl = "https://mp3quran.net/api/v3/";
-const endPoint = "reciters";
-const lang = "ar";
+const apiUrl     = "https://mp3quran.net/api/v3/";
+const endPoint   = "reciters";
+const lang       = "ar";
 async function getReciters() {
-  const res = await fetch(`${apiUrl}reciters?language=ar`);
+  loader.style.display="block";
+  const res  = await fetch(`${apiUrl}reciters?language=ar`);
   const data = await res.json();
   recitersId.innerHTML = "<option selected>اختار القارئ</option>";
   data.reciters.forEach((resit) => {
@@ -20,11 +22,13 @@ async function getReciters() {
   for (var i = 0; i < optionsArray.length; i++) {
     recitersId.options[i] = new Option(optionsArray[i].text, optionsArray[i].value);
   }
+  loader.style.display="none";
 }
 getReciters()
 recitersId.onchange = (e) => { getMoshafs(e.target.value) }
 async function getMoshafs(resId) {
-  const res = await fetch(`${apiUrl}reciters?language=ar&reciter=${resId}`);
+  loader.style.display="block";
+  const res  = await fetch(`${apiUrl}reciters?language=ar&reciter=${resId}`);
   const data = await res.json();
   riwayatId.innerHTML = "<option selected> اختار الرواية</option>";
   data.reciters[0].moshaf.forEach((rw) => {
@@ -35,10 +39,12 @@ async function getMoshafs(resId) {
     const selectedMoshaf = riwayatId.options[riwayatId.selectedIndex];
     getSuwar(selectedMoshaf.dataset.server, selectedMoshaf.dataset.list)
   }
+  loader.style.display="none";
 }
 async function getSuwar(suwraServer, suwraList) {
-  const res = await fetch(`${apiUrl}suwar?language=ar`);
-  const data = await res.json();
+  loader.style.display="block";
+  const res         = await fetch(`${apiUrl}suwar?language=ar`);
+  const data        = await res.json();
   suwarId.innerHTML = "<option selected>اختار السورة</option>";
   suwraList.split(",").forEach((sl) => {
     const startName = sl.padStart(3, '0')
@@ -49,18 +55,21 @@ async function getSuwar(suwraServer, suwraList) {
     });
   });
   suwarId.onchange = (e) => {
-    audioSrc.src = suwraServer + e.target.value + '.mp3';
+    audioSrc.src   = suwraServer + e.target.value + '.mp3';
     audioSrc.play();
   }
+  loader.style.display="none";
 }
 const playLive = (channel) => {
+  loader.style.display="block";
   if (Hls.isSupported()) {
     var video = document.getElementById('liveVideo');
-    var hls = new Hls();
+    var hls   = new Hls();
     hls.loadSource(channel);
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
       video.play();
     });
   }
+  loader.style.display="none";
 }
