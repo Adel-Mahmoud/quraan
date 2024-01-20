@@ -1,0 +1,22 @@
+{
+    "name": " القراءن الكريم",
+    "short_name": "PWA",
+    "description": "موقع القراءن الكريم",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0099ff",
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "/1.jpg",
+        "sizes": "96x96",
+        "type": "image/png"
+      }
+    ]
+  }
+  
