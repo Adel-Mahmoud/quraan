@@ -2,7 +2,7 @@
     "name": " القراءن الكريم",
     "short_name": "القراءن الكريم",
     "description": "موقع القراءن الكريم",
-    "start_url": "/",
+    "start_url": "./",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0099ff",
