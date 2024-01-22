@@ -22,6 +22,7 @@ async function getReciters() {
   for (var i = 0; i < optionsArray.length; i++) {
     recitersId.options[i] = new Option(optionsArray[i].text, optionsArray[i].value);
   }
+  recitersId.innerHTML = "<option selected>اختار القارئ</option>";
   loader.style.display="none";
 }
 getReciters()
