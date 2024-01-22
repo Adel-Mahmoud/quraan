@@ -8,14 +8,14 @@ select{
 }
 
 .connect-body {
-    display: none;
+    display: nonee;
     width: 100%;
     min-height: 100vh;
     position: fixed;
     margin: 0;
     padding: 0;
     z-index: 1000;
-    background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background:#2677b6;
 }
 
 .connect-wrapper {
@@ -44,8 +44,7 @@ select{
 .connect-h4 {
     color: #f1f1f1;
     font-family: arial;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 500;
 }
 
 .connect-button {
