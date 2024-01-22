@@ -1,15 +1,15 @@
-function handleConnectionChange() {
-  if (navigator.onLine) {
-    document.getElementById("ConnectionChange").style.display = 'none';
-    console.log("الجهاز أصبح متصلاً بالإنترنت");
-  } else {
-    document.getElementById("ConnectionChange").style.display = 'block';    
-    console.log("الجهاز فقد الاتصال بالإنترنت");
-  }
-}
+// function handleConnectionChange() {
+//   if (navigator.onLine) {
+//     document.getElementById("ConnectionChange").style.display = 'none';
+//     console.log("الجهاز أصبح متصلاً بالإنترنت");
+//   } else {
+//     document.getElementById("ConnectionChange").style.display = 'block';    
+//     console.log("الجهاز فقد الاتصال بالإنترنت");
+//   }
+// }
 
-window.addEventListener("online", handleConnectionChange);
-window.addEventListener("offline", handleConnectionChange);
+// window.addEventListener("online", handleConnectionChange);
+// window.addEventListener("offline", handleConnectionChange);
 
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".change-name");
