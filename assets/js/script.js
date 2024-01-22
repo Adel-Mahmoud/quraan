@@ -10,7 +10,6 @@ async function getReciters() {
   loader.style.display="block";
   const res  = await fetch(`${apiUrl}reciters?language=ar`);
   const data = await res.json();
-  recitersId.innerHTML = "<option selected>اختار القارئ</option>";
   data.reciters.forEach((resit) => {
     recitersId.innerHTML += `<option value="${resit.id}">${resit.name}</option>`;
   }
