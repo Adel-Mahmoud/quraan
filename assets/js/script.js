@@ -1,5 +1,3 @@
-
-
 function handleConnectionChange() {
   if (navigator.onLine) {
     document.getElementById("ConnectionChange").style.display = 'none';
