@@ -8,12 +8,12 @@
     "theme_color": "#0099ff",
     "icons": [
       {
-        "src": "192.png",
+        "src": "https://adel-mahmoud.github.io/quraan/192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "512.png",
+        "src": "https://adel-mahmoud.github.io/quraan/512.png",
         "sizes": "512x512",
         "type": "image/png"
       }
