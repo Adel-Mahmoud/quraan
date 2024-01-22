@@ -329,6 +329,7 @@ button:focus:not(:focus-visible) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
   padding: 170px 0px 270px 0px;
   text-align: center;
 }
