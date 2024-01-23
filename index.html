@@ -221,6 +221,17 @@ https://templatemo.com/tm-572-designer
             return false;
         }); 
     </script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/quraan/sw.js')
+      .then((registration) => {
+        console.log('Service Worker registrado con éxito:', registration);
+      })
+      .catch((error) => {
+        console.error('Error al registrar el Service Worker:', error);
+      });
+  }
+</script>
 </body>
 
 </html>
