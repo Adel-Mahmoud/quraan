@@ -328,6 +328,7 @@ button:focus:not(:focus-visible) {
   background-image: url(../../1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   padding: 170px 0px 270px 0px;
   text-align: center;
