@@ -1,4 +1,4 @@
-const cacheName = "cache1"; // Change value to force update
+const cacheName = "cache-v1"; // Change value to force update
 
 self.addEventListener("install", event => {
 	// Kick out the old service worker
@@ -8,20 +8,20 @@ self.addEventListener("install", event => {
 		caches.open(cacheName).then(cache => {
 			return cache.addAll([
 				"/",
-                '192.png',
-                '512.png',
-                'index.html',
-                'assets/css/custome-style.css',
-                'assets/css/templatemo-572-designer.css',
-                'vendor/bootstrap/css/bootstrap.min.css',
-                'assets/css/fontawesome.css',
-                'logo.png',
-                'assets/images/bg1.jpg',
-                '1.jpg',
-                'vendor/jquery/jquery.min.js',
-                'vendor/bootstrap/js/bootstrap.min.js',
-                'assets/js/custom.js',
-                'assets/js/script.js',
+                './192.png',
+                './512.png',
+                './index.html',
+                './assets/css/custome-style.css',
+                './assets/css/templatemo-572-designer.css',
+                './vendor/bootstrap/css/bootstrap.min.css',
+                './assets/css/fontawesome.css',
+                './logo.png',
+                './assets/images/bg1.jpg',
+                './1.jpg',
+                './vendor/jquery/jquery.min.js',
+                './vendor/bootstrap/js/bootstrap.min.js',
+                './assets/js/custom.js',
+                './assets/js/script.js',
 			]);
 		})
 	);
